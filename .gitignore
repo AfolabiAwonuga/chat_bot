@@ -1,2 +1,4 @@
 Pipfile*
 mcu
+__pycache__
+info*
