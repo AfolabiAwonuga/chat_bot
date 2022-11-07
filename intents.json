@@ -1,0 +1,127 @@
+{
+    "intents": [
+        {
+            "label": "greet",
+            "pattern":[
+                "What’s up",
+                "Hello",
+                "Hi",
+                "Hey",
+                "Greetings",
+                "I have a question",
+                "Good morning",
+                "Good afternoon",
+                "Good evening",
+                "Good day",
+                "Are you there?"
+            ],
+            "response":[
+                "Hey, how may i be of help to you?",
+                "Hello, what queries would you like me to answer?",
+                "Hi there, i am here to help. Ask away!",
+                "Greetings, thanks for visiting. How may i help you?"
+            ]
+
+
+        },
+
+        {
+            "label": "terminate",
+            "pattern":[
+                "Bye",
+                "Thank yoou",
+                "Goodbye"
+            ],
+            "response":[
+                "Glad i could help, see you later",
+                "Take care",
+                "Bye",
+                "Have a nice day",
+                "Come back soon"
+            ]
+        },
+        
+        {
+            "label": "about",
+            "pattern": [
+                "Are you human?",
+                "Are you a robot?",
+                "Who’s your boss",
+                "What is your name?",
+                "Tell me about yourself",
+                "Who made you?"
+            ],
+            "response":[
+                "I AM A BOT, My name is GAL(Gerardo Alcantara Labi), i was built by Afolabi Awonuga using supervised machine learning.",
+                "I'M A BOT, I'm GAL (Gerardo Alcantara Labi), and Afolabi Awonuga used supervised machine learning to create me."
+
+            ]
+        },
+
+        {
+            "label": "function",
+            "pattern":[
+                "What do you do?",
+                "Why were you built?"
+            ],
+            "response":[
+                "I assist customers trying to purchase our fragrances",
+                "I help consumers who want to buy our fragrances."
+            ]
+        },
+
+        {
+            "label": "stoke",
+            "pattern":[
+                "what perfumes are in stoke",
+                "I'm looking to purchase some perfumes, what perfumes do you have in stoke",
+                "Perfumes",
+                "What perfumes do you have"
+                
+            ],
+            "response":[
+                "Here's our stoke list",
+                "Perfumes available at the moment"
+            ]
+        },
+
+        {
+            "label": "order",
+            "pattern":[
+                "How can I cancel my order?",
+                "How can I reverse my order?"
+            ],
+            "response":[
+                "You may cancel your order as long as it hasn't been dispatched. If you are a registered customer, you may accomplish this by logging into your account. In the event that your order has not yet been sent, a 'CANCEL' option will appear."
+            ]
+        },
+
+        {
+            "label": "payment",
+            "pattern":[
+                "What payment methods can I use?",
+                "What ways of payment are available?",
+                "How do i pay?"
+            ],
+            "response":[
+                "We accept use Visa, MasterCard, Amex, PayPal and klarna.",
+                "You may pay with Klarna, PayPal, Amex, Visa, and MasterCard.",
+                "You may pay with Visa, MasterCard, American Express, PayPal, or Klarna.",
+                "Visa, MasterCard, American Express, PayPal, and Klarna are all accepted." 
+            ]
+        },
+
+        {
+            "label": "delivery",
+            "pattern":[
+                "Who will be delivering my order?",
+                "Who will be in charge of delivering my order?",
+                "How will my order be delivered",
+                "How do you deliver?"
+            ],
+            "response":[
+                "We employ Dpd and Royal Mail for standard delivery because we believe in utilising dependable, experienced couriers. Please keep in mind that we do not allow shipments to be rerouted in order to protect our consumers."
+            ]
+        }
+    ]
+}
