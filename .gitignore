@@ -1,4 +1,4 @@
 Pipfile*
 mcu
-__pycache__
+chat_bot/__pycache__
 info*
