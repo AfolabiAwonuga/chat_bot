@@ -1,4 +1,5 @@
 import json 
+from nltk.tokenize import word_tokenize 
 import numpy as np
 from processing import process
 from processing import bow
@@ -7,15 +8,14 @@ import torch
 import torch.nn as nn 
 from torch.utils.data import Dataset, DataLoader 
 
-# with open('intents.json', 'r') as f:
-#     intents = json.load(f)
 
 intents = json.loads(open('intents.json').read())
 
+
+# PRE-PROCESSING INTENT PATTERNS
 corpus = []
 labels = []
 data = []
-
 
 for intent in intents['intents']:
     labels.append(intent['label'])
@@ -32,23 +32,21 @@ labels = sorted(labels)
 # print('\n')
 # print(index)
 
-# BAG OF WORDS 
+# BAG OF WORDS (vectorization of processed patterns)
 X = []
 y = []
-
 for (feat, target) in data:
     X.append(bow(feat, corpus))
     y.append(labels.index(target))
 
-X = np.array(X, )
+X = np.array(X)
 y = np.array(y)
 
 # print(len(X[0]), len(corpus))
 # print('\n')
 # print(y, len(y))
 
-# TORCH SET 
-
+# TORCH SET (custom pytorch dataset)
 class TrainSet(Dataset):
     def __init__(self):
         self.n_samples = len(X)
@@ -71,22 +69,16 @@ output_size = len(labels)
 
 # print(input_size)
 
-device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+# TRAINING BOT 
 model = Net(input_size, hidden_size, output_size)
-
 criterion = nn.CrossEntropyLoss()
-optimizer = torch.optim.Adam(model.parameters(), lr = 0.001, )
+optimizer = torch.optim.Adam(model.parameters(), lr = 0.001)
 
 epochs = 1000
 for epoch in range(epochs):
     for (feat, target) in loader:
-        feat = feat.to(device)
-        target = target.to(device)
-
         outputs = model(feat)
         loss = criterion(outputs, target) 
-
-
         optimizer.zero_grad()
         loss.backward()
         optimizer.step()
@@ -96,7 +88,7 @@ for epoch in range(epochs):
 
 print(f"final loss, loss={loss.item():.4f}")        
 
-
+# SAVING MODEL
 data = {
     "model_state": model.state_dict(),
     "input_size": input_size,

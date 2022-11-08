@@ -4,43 +4,56 @@ from nltk.corpus import stopwords
 import string 
 import numpy as np 
 
+
 def process(sentence):
+    """
+    Pre-process a text for ML tasks 
+    - Remove punctuations 
+    - Tokenize
+    - Remove stop words 
+    - Stem each word   
+    """
     sw = stopwords.words('english')
     stemmer = PorterStemmer()
     processed_tokens = []
     ignore = ['’']
     ignore.extend(string.punctuation)
-    puntless = ""
+
+    punctless = ""
     
     for char in sentence:
         if char not in ignore:
-            puntless += char 
+            punctless += char 
 
-    tokens = word_tokenize(puntless)      
+    tokens = word_tokenize(punctless)      
     for term in tokens:
-        if term not in sw :
-            processed_tokens.append(stemmer.stem(term))
+        # if term not in sw :
+        processed_tokens.append(stemmer.stem(term))
 
     return processed_tokens        
+
+# EXAMPLE 
 # check = "Greetings, thanks for visiting. How may i help you?"
-
 # print(check + "\n") 
-# print(process(check))
+# print(word_tokenize(check))
 
-def bow(processed_sentence, corpus):
-    init_bag = np.zeros(len(corpus), dtype =np.float32)
+def bow(tokens, corpus):
+    """
+    Create text vectorization using BAG OF WORDS model
+    """
+
+    # processed_sentence = [stemmer.stem(term) for term in tokens if term not in ignore]
+    init_bag = np.zeros(len(corpus), dtype = np.float32)
+
     for i, term in enumerate(corpus):
-        if term in processed_sentence:
+        if term in tokens:
             init_bag[i] = 1.0
     return init_bag     
 
 
+# EXAMPLE 
 # print(bow(['greet', 'thank', 'visit', 'how', 'may', 'help'], 
-# ['afternoon', 'are', 'avail', 'boss', 'built', 'bye', 'cancel', 
-# 'charg', 'day', 'deliv', 'even', 'good', 'goodby', 'greet', 'hello', 
-# 'hey', 'hi', 'how', 'human', 'i', 'im', 'look', 'made', 'method', 'morn', 
-# 'name', 'order', 'pay', 'payment', 'perfum', 'purchas', 'question', 'revers',
-#  'robot', 'stoke', 'tell', 'thank', 'use', 'way', 'what', 'whi', 'who', 'yoou']))   
+# ['Greetings', ',', 'thanks', 'for', 'visiting', '.', 'How', 'may', 'i', 'help', 'you', '?']))   
 
 
 

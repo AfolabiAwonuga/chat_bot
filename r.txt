@@ -1,0 +1,7 @@
+nltk
+numpy
+torch 
+torchvision 
+torchaudio
+streamlit
+streamlit_chat

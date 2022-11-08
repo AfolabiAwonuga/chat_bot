@@ -5,6 +5,9 @@ from torch.utils.data import Dataset, DataLoader
 
 
 class Net(nn.Module):
+    """
+    Neural network class
+    """
     def __init__(self, input_size, hidden_size, num_classes):
         super(Net, self).__init__()
         self.l1 = nn.Linear(input_size, hidden_size)
