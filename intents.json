@@ -42,85 +42,109 @@
         },
         
         {
-            "label": "about",
-            "pattern": [
-                "Are you human?",
-                "Are you a robot?",
-                "Who’s your boss",
-                "What is your name?",
-                "Tell me about yourself",
-                "Who made you?"
+            "label": "order enquiry",
+            "pattern":[
+                "How do I place an order on Gym~eet ?", 
+                "How do i order ?",
+                "How do I order something from Gym~eet ?",
+                "How can I make a purchase on Gym~eet?",
+                "How do I place a Gym~eet order?",
+                "How can I place an order on Gym~eet?"
             ],
             "response":[
-                "I AM A BOT, My name is GAL(Gerardo Alcantara Labi), i was built by Afolabi Awonuga using supervised machine learning.",
-                "I'M A BOT, I'm GAL (Gerardo Alcantara Labi), and Afolabi Awonuga used supervised machine learning to create me."
-
+                "To place an order follow the following steps: Enter the name of the item in the search bar. You can also browse for products by selecting the category on the left side of your screen Click on a product to learn more about it or add to your cart Click add to cart and proceed to the checkout page Register or login into your existing account by entering your email and password Enter your shipping/billing information ensuring your address is complete and accurate Select a Delivery Method Choose your preferred Payment Method Click on Confirm Order to complete your order", 
+                "To place an order, complete these steps: In the search field, type in the name of the item you want to purchase. You may also search for items by selecting a category on the left side of your screen.  Click on a product to read more about it or add it to your cart. Click add to cart to proceed to the checkout page. Create a new account or sign in to an existing one by entering your email address and password. Enter your shipping/billing information, making sure your address is complete and accurate. Choose a Delivery Method. To finish your order, Select your desired method of payment and click Confirm Order",
+                "To place an order, go through these steps: Use the search field to type the name of the item you want to purchase. You may also use the category drop-down menu on the left side of your screen to explore through items. Click on a product to get additional details or add it to your shopping cart. Click add to cart to proceed to the checkout page. Enter your email address and password to create a new account or log into an existing one.  Enter your shipping and billing information, making sure your address is complete and valid. Select a delivery method.  Select your chosen payment method.  To finish your order, click Confirm Order"
             ]
+
         },
 
         {
-            "label": "function",
+            "label": "technical difficulty",
             "pattern":[
-                "What do you do?",
-                "Why were you built?"
-            ],
-            "response":[
-                "I assist customers trying to purchase our fragrances",
-                "I help consumers who want to buy our fragrances."
-            ]
-        },
-
-        {
-            "label": "stoke",
-            "pattern":[
-                "what perfumes are in stoke",
-                "I'm looking to purchase some perfumes, what perfumes do you have in stoke",
-                "Perfumes",
-                "What perfumes do you have"
+                "I am having trouble adding products to my cart", 
+                "I'm having problems adding items to my shopping basket",
+                "I am experiencing issues adding items to my cart",
+                "Adding items to my cart is giving me problems"
                 
             ],
             "response":[
-                "Here's our stoke list",
-                "Perfumes available at the moment"
+                "If you are having trouble adding products to your cart, please make sure that you have made all relevant size and colour selections. If you still have problems this may mean that the item, you are trying to buy is sold out",
+                "If you're experiencing difficulties adding things to your basket, ensure you've selected all applicable size and colour options. If you continue to have issues, it is possible that the item you are attempting to purchase has sold out",
+                "If you are experiencing problems adding goods to your basket, please ensure that you have selected all applicable size and color options. If you continue to encounter issues, it is possible that the item you are attempting to purchase has sold out.",
+                "Make sure you have chosen the appropriate size and color options if you are having difficulties adding items to your basket. If you are still having issues, the product you are attempting to purchase could be out of stock",
+                "If you are experiencing problems adding items to your basket, double check that you have chosen the appropriate size and color. The item you are attempting to purchase may be sold out if you are still experiencing issues"
             ]
         },
 
         {
-            "label": "order",
+            "label": "order tracking ",
             "pattern":[
-                "How can I cancel my order?",
-                "How can I reverse my order?"
+                "How do I track my order?", 
+                "How can I track my order?",
+                "How can I keep track of my order?",
+                "How do I keep track of my order?"
             ],
             "response":[
-                "You may cancel your order as long as it hasn't been dispatched. If you are a registered customer, you may accomplish this by logging into your account. In the event that your order has not yet been sent, a 'CANCEL' option will appear."
+                 "To track the status of your order: Log into your Gym~eet account Select 'Account' in the upper right-hand menu Select 'Orders' Find the item you would like to track and click 'see details' Select the 'track item' to display delivery details You also receive delivery updates via email Account mailbox and App notifications to make it easy to know when your order will be delivered.",
+                 "To monitor the progress of your order: Log into your Gym~eet account Select 'Account' in the upper right-hand menu  Select 'Orders'  Find the item you would like to track and click 'see details'  Select the 'track item' to display delivery details You also receive delivery updates via email Account mailbox and App notifications to make it easy to know when your order will be delivered." 
             ]
         },
 
         {
-            "label": "payment",
+            "label": "delays",
             "pattern":[
-                "What payment methods can I use?",
-                "What ways of payment are available?",
-                "How do i pay?"
+                "My order is delayed what should I do?",
+                "What should I do if my order is delayed?",
+                "My order has been delayed; what should I do?",
+                "What should I do if my order is late?"
             ],
             "response":[
-                "We accept Visa, MasterCard, Amex, PayPal and klarna.",
-                "You may pay with Klarna, PayPal, Amex, Visa, and MasterCard.",
-                "You may pay with Visa, MasterCard, American Express, PayPal, or Klarna.",
-                "Visa, MasterCard, American Express, PayPal, and Klarna are all accepted." 
+                "We aim to avoid delays however due to unforeseen circumstances such as severe weather or custom restrictions (for Gym~eet Global items) etc. packages can face delays. If your delivery is more than 24 hours late, please contact customer service. We will also send you an update via email as soon as it is available for delivery",
+                "Although we work hard to prevent them, delays can occur due to unavoidable events like bad weather or customs limitations (for Gym~eet Global items, for example). Please get in touch with customer care if your delivery is more than 24 hours late. As soon as it becomes ready for delivery, we will also email you an update."
             ]
         },
 
         {
             "label": "delivery",
             "pattern":[
-                "Who will be delivering my order?",
-                "Who will be in charge of delivering my order?",
-                "How will my order be delivered",
-                "How do you deliver?"
+                "Can I collect my order at a pickup station?", 
+                "Can my order be picked up at a pickup location?",
+                "Can I pick up my order at a pickup station?",
+                "Can I pick up my order at a pickup location?",
+                "How much are delivery fees ?",
+                "How much does shipping cost?",
+                "How much are shipping fees?",
+                "What are the delivery costs?",
+                "What are shipping charges?",
+                "What are the delivery options?",
+                "Delivery options"
+
             ],
             "response":[
-                "We employ Dpd and Royal Mail for standard delivery because we believe in utilising dependable, experienced couriers. Please keep in mind that we do not allow shipments to be rerouted in order to protect our consumers."
+                "You can either choose home delivery or choose to pick up your order at one of many Gym~eet Pick up Stations. For home delivery, fees vary based on your geographic location, delivery method, shipment method and the size or category of the product you ordered. You can review delivery fees before placing your order on the product page as well as during checkout",
+                "You have the option of choosing home delivery or picking up your order at one of the several Gym-eet Pick up Stations. Fees for home delivery vary depending on your location, the method of delivery, the method of shipment, and the quantity or kind of the item you bought. Prior to placing your order, you may see delivery costs on the product page and in the checkout process.",
+                "You have two options for delivery: either home or one of the many Gym'eet Pick up Stations. The cost of home delivery varies depending on your geographic region, the chosen delivery method, the chosen shipping method, and the size or kind of the item you bought. On the product page and at checkout, you may see delivery costs prior to making your purchase.",
+                "You may have your order delivered to your house or picked up at one of the numerous Gymeet Pick up Stations. Fees for home delivery vary depending on your location, delivery method, shipment method, and the size or category of the goods you bought. You may evaluate delivery fees on the product page as well as during checkout before placing your purchase.",
+                "You may have your order delivered to your home or pick it up at one of the numerous Gymeet Pick up Stations. Fees for home delivery vary depending on your geographic region, delivery method, shipment method, and the size or category of the goods you bought. You may evaluate delivery fees before placing your purchase on the product page as well as during checkout."
+            ]
+        },
+
+        {
+            "label": "cancellations",
+            "pattern":[
+                "How can I cancel my order?", 
+                "The product I wish to cancel has already been shipped, what do I do?",
+                "I get an error message when I try to submit my online cancellation request. Why?", 
+                "What should I do if the product I want to cancel has already been shipped?",
+                "When I try to submit my online cancellation request, I receive an error notice. Why?",
+                "How can I revoke my order?"
+
+            ],
+            "response":[
+                "To cancel your order follow these steps: Log into your Gym~eet acc: Select Account in the upper right-hand: Select O: Find the item you would like to cancel and click Cancel: Select the cancellation reason from the drop-down menu, and click s: If your order is prepaid, you will receive your refund as per standard timelines. Please note you may cancel one item at a time. To cancel an item on your order, it must not yet be shipped (which means that it is already on its way to your selected delivery address). In certain cases, the option to cancel an individual item from your order may not be available. This is usually the case if you have benefited from an offer based on the total number of items ordered (example: free delivery above ascertain order value). You may need to cancel the entire order, please contact customer care for more support.", 
+                "To cancel your order follow these steps: Log into your Gym~eet account  Select Account in the upper right-hand menu Select Orders Find the item you would like to cancel and click Cancel item Select the cancellation reason from the drop-down menu, and click submit If your order is prepaid, you will receive your refund as per standard timelin. You may only cancel one item at a time, kindly take note. An item on your purchase must not have been dispatched (that is, not actually on its way to the delivery location you chose) in order for you to cancel it. The option to remove a specific item from your order may not always be accessible. Typically, if you took advantage of a deal depending on the total amount of things ordered, this will be the case (example: free delivery above ascertain order value). You might need to cancel the entire order; for additional assistance, please get in touch with customer service.",
+                "To cancel your order follow these steps: Log into your Gym~eet account Select Account in the upper right-hand menu  Select Orders  Find the item you would like to cancel and click Cancel item  Select the cancellation reason from the drop-down menu, and click submit  If your order is prepaid, you will receive your refund as per standard timelines. Note that you may only cancel one item at a time. Any item on your purchase that has already been sent (i.e., is en route to the delivery location you have chosen) cannot be cancelled. In some circumstances, you might not have the opportunity to cancel a specific item from your order. This is typically true if you took advantage of a promotion depending on the overall quantity of things you ordered (example: free delivery above ascertain order value). If you think you need to cancel the entire order, please get in touch with customer service."
             ]
         }
     ]
