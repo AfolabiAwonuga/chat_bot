@@ -6,9 +6,9 @@ Gym~eet is an online marketplace designed as a [case study](https://www.behance.
 Gym~eet chatbot is a chatbot built using artificial neural networks. It was built for the purpose of answering customer enquiries.
 
 
-## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+https://user-images.githubusercontent.com/109032587/214984605-a6966a98-6a95-4049-9736-9b471226055f.mp4
+
 
 
 ## Tech Stack
