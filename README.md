@@ -6,16 +6,15 @@ Gym~eet is an online marketplace designed as a [case study](https://www.behance.
 Gym~eet chatbot is a chatbot built using artificial neural networks. It was built for the purpose of answering customer enquiries.
 
 
-
 https://user-images.githubusercontent.com/109032587/214984605-a6966a98-6a95-4049-9736-9b471226055f.mp4
 
 
 
 ## Tech Stack
 
-**Client:** React, Redux, TailwindCSS
-
-**Server:** Node, Express
+- Python 
+- Docker 
+- AWS
 
 
 ## Run using Docker 
@@ -23,29 +22,22 @@ https://user-images.githubusercontent.com/109032587/214984605-a6966a98-6a95-4049
 Clone the project
 
 ```bash
-  git clone https://link-to-project
+  git clone [https://link-to-project](https://github.com/AfolabiAwonuga/chat_bot.git)
 ```
 
 Go to the project directory
 
 ```bash
-  cd my-project
+  cd chat_bot
 ```
 
-Install dependencies
+Run with docker compose
 
 ```bash
-  npm install
-```
-
-Start the server
-
-```bash
-  npm run start
+  docker compose up
 ```
 
 
 ## Demo
 
-Insert gif or link to demo
-
+For demo purposes chatbot can be accessed [here]()
