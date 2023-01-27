@@ -22,7 +22,7 @@ https://user-images.githubusercontent.com/109032587/214984605-a6966a98-6a95-4049
 Clone the project
 
 ```bash
-  git clone [https://link-to-project](https://github.com/AfolabiAwonuga/chat_bot.git)
+  git clone https://github.com/AfolabiAwonuga/chat_bot.git
 ```
 
 Go to the project directory
