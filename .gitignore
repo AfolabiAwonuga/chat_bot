@@ -3,3 +3,4 @@ mcu
 __pycache__/
 info*
 r.txt
+.Ds_Store

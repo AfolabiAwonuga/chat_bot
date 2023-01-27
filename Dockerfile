@@ -4,7 +4,7 @@ EXPOSE 8501
   
 WORKDIR /app
 
-COPY  requirements.txt requirements.txt
+COPY  r.txt requirements.txt
 
 RUN apt-get update && apt-get install -y \
     build-essential \

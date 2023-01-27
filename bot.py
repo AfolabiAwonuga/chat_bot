@@ -31,7 +31,12 @@ if 'history' not in st.session_state:
     st.session_state['history'] = []
 
 with placeholder.container():
-    message('hello') 
+    message('Hello, i am a chatbot for Gym~eet built to answer your enquiries. \
+            Gym~eet is a platform where users can buy gym equipments that can be \
+            used in the comfort of their homes.') 
+    message('You can tell me if you need help on orders and delivery or  \
+            if you are having any technical difficuly.')
+    
     if sentence:  
         sentence_processed = process(sentence)
         X = bow(sentence_processed, corpus)
@@ -46,7 +51,7 @@ with placeholder.container():
         proba = torch.softmax(output, dim = 1)
         prob = proba[0][predicted.item()]
             
-        if prob.item() > 0.75:
+        if prob.item() > 0.65:
             for intent in intents['intents']:
                 if label == intent['label']:
                     response = (random.choice(intent['response']))
