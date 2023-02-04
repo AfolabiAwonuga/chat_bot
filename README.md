@@ -44,4 +44,4 @@ Run with docker compose
 
 ## Demo
 
-For demo purposes chatbot can be accessed [here]()
+For demo purposes chatbot can be accessed [here](http://54.205.111.198:8501/)
