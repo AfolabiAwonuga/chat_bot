@@ -1,11 +1,11 @@
 import json 
-from nltk.tokenize import word_tokenize 
-import numpy as np
-from processing import process
-from processing import bow
-from model import Net
 import torch
+import numpy as np
 import torch.nn as nn 
+from model import Net
+from processing import bow
+from processing import process
+from nltk.tokenize import word_tokenize 
 from torch.utils.data import Dataset, DataLoader 
 
 
@@ -48,15 +48,51 @@ y = np.array(y)
 
 # TORCH SET (custom pytorch dataset)
 class TrainSet(Dataset):
+    """
+    Custom dataset class for training data.
+
+    This class represents a dataset with input features (X) and corresponding
+    target labels (y).
+
+    Attributes:
+        X (list): List of input samples (features).
+        y (list): List of target labels.
+
+    """
     def __init__(self):
+        """
+        Initialize the dataset.
+
+        Args:
+            X (list): List of input samples (features).
+            y (list): List of target labels.
+
+        """
         self.n_samples = len(X)
         self.x = X
         self.y = y
 
-    def __getitem__(self, index):
+    def __getitem__(self, index: int)-> tuple:
+        """
+        Get a specific item from the dataset.
+
+        Args:
+            index (int): Index of the item to retrieve.
+
+        Returns:
+            tuple: A tuple containing the input feature and target label.
+
+        """
         return self.x[index], self.y[index]
 
-    def __len__(self):
+    def __len__(self) -> int:
+        """
+        Get the total number of samples in the dataset.
+
+        Returns:
+            int: Total number of samples.
+
+        """
         return self.n_samples
 
 

@@ -1,17 +1,25 @@
 from nltk.tokenize import word_tokenize 
 from nltk.stem import PorterStemmer 
 from nltk.corpus import stopwords 
-import string 
+from typing import List
 import numpy as np 
+import string 
 
 
-def process(sentence):
+def process(sentence: str) -> List[str]:
     """
-    Pre-process a text for ML tasks 
-    - Remove punctuations 
+    Pre-process a text for NLP tasks.
+    - Remove punctuations
     - Tokenize
-    - Remove stop words 
-    - Stem each word   
+    - Remove stop words
+    - Stem each word
+
+    Args:
+        sentence (str): The input text to be pre-processed.
+
+    Returns:
+        list: A list of pre-processed and stemmed tokens.
+
     """
     sw = stopwords.words('english')
     stemmer = PorterStemmer()
@@ -37,11 +45,21 @@ def process(sentence):
 # print(check + "\n") 
 # print(word_tokenize(check))
 
-def bow(tokens, corpus):
+def bow(
+        tokens: List[str],
+        corpus: List[str]
+) -> np.ndarray:
     """
-    Create text vectorization using BAG OF WORDS model
-    """
+    Create text vectorization using the Bag of Words (BoW) model.
 
+    Args:
+        tokens (list): List of pre-processed and stemmed tokens.
+        corpus (list): List of terms in the corpus.
+
+    Returns:
+        numpy.ndarray: A BoW vector representing the input tokens.
+
+    """
     # processed_sentence = [stemmer.stem(term) for term in tokens if term not in ignore]
     init_bag = np.zeros(len(corpus), dtype = np.float32)
 

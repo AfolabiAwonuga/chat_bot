@@ -1,12 +1,12 @@
+import time
 import json 
 import torch 
-from model import Net
-from processing import process, bow
 import random 
+from model import Net
 import streamlit as st 
 from streamlit_chat import message
-import time
-import random 
+from processing import process, bow
+
 
 # LOADING INTENTS AND MODEL
 intents = json.loads(open('intents.json').read())
@@ -55,17 +55,9 @@ with placeholder.container():
             for intent in intents['intents']:
                 if label == intent['label']:
                     response = (random.choice(intent['response']))
-                    
-
         else:
             response = "Oops, I don't understand that"
-        
-        # message(sentence, is_user = True)
-        # # time.sleep(2)
-        # message(label)
-        # message(prob.item())
-        # message(response)
-        
+    
         user_message = {
             "message": sentence,
             "is_user": True
